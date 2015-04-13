@@ -49,6 +49,11 @@ module YamlDb
         expect(Utils.convert_boolean(0)).to be false
       end
 
+      it "converts ruby strings TRUE and FALSE to true and false" do
+        expect(Utils.convert_boolean('TRUE')).to be true
+        expect(Utils.convert_boolean('FALSE')).to be false
+      end
+
     end
   end
 end
